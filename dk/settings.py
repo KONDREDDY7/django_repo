@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import json
 
-with open('settings.json') as divya:
+cwd = os.path.dirname(os.path.realpath(__file__))
+with open(cwd + '/settings.json') as divya:
     data = json.load(divya)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
